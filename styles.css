@@ -1,0 +1,449 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --clr-primary: #678e3e;
+  --clr-primary-light: #beed8c;
+  --clr-grey-1: #102a42;
+  --clr-grey-5: #617d98;
+  --clr-grey-10: #f1f5f8;
+  --clr-white: #fff;
+  --ff-primary: "Catamaran", sans-serif;
+  --ff-secondary: "Grand Hotel", cursive;
+  --transition: all 0.3s linear;
+  --spacing: 0.2rem;
+  --radius: 0.5rem;
+}
+body {
+  background: hsl(210, 36%, 96%);
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.25rem;
+  text-transform: capitalize;
+  line-height: 1.25rem;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+p {
+  margin-bottom: 1.25rem;
+  color: grey;
+  font-family: "Times New Roman", Times, serif;
+}
+.about {
+  min-height: 60vh;
+  background: linear-gradient(rgba(14, 13, 13, 0.9), rgba(22, 21, 21, 0.9)),
+    url("./images/main.jpeg") center/cover no-repeat;
+  color: white;
+}
+.about p {
+  color: white;
+}
+.section {
+  padding: 5rem 0;
+}
+.section-title {
+  /* margin-top: 3rem; */
+  margin-bottom: 4rem;
+  text-align: center;
+}
+.section-content {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1170px;
+}
+
+/* Padding does not affect background images. 
+It only affects texts and  */
+/* .content {
+  padding: 2rem;
+} */
+/* .section-title,
+.about-info,
+.icon {
+  margin: 2rem auto;
+} */
+.about-image,
+.about-info {
+  margin-bottom: 2rem;
+}
+.about-icon {
+  display: inline-block;
+  padding: 1.2rem;
+  border-radius: 50%;
+  border: 0px solid transparent;
+  background: var(--clr-white);
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+.icons {
+  color: #678e3e;
+  font-size: 1.5rem;
+}
+.about-icon:hover {
+  /* display: inline-block;
+  padding: 1.2rem;
+  border-radius: 50%;
+  border: 0px solid transparent; */
+  background: #678e3e;
+  color: white;
+  cursor: pointer;
+}
+.icons:hover {
+  color: white;
+  font-size: 1.5rem;
+}
+.images {
+  width: 70vw;
+}
+@media screen and (min-width: 992px) {
+  .about-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .about-info,
+  .about-image {
+    flex: 0 0 calc(50% - 2rem);
+    margin-bottom: 0;
+    align-self: center;
+  }
+  .images {
+    width: 40vw;
+    object-fit: cover;
+  }
+}
+
+/* 
+=========
+Product
+=========
+*/
+.product-icon {
+  border: 1px solid #808080;
+  max-width: 20rem;
+  height: 16rem;
+  /* overflow: hidden; */
+  margin: 3rem auto;
+  padding-right: auto;
+  padding-left: auto;
+  text-align: center;
+  transition: var(--transition);
+}
+.pro-icon {
+  font-size: 3rem;
+  display: inline-block;
+  color: green;
+  padding-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+.product-title {
+  font-weight: 200;
+  margin-bottom: 0.5rem;
+}
+.product-text {
+  max-width: 15rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.product-icon:hover {
+  background: hsl(210, 36%, 96%);
+}
+@media screen and (min-width: 768px) {
+  .product-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .product-icon {
+    flex: 0 0 calc(33.333% - 1rem);
+    /* margin-right: rem; */
+    max-width: 13rem;
+    height: 18rem;
+  }
+}
+@media screen and (min-width: 900px) {
+  .product-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .product-icon {
+    flex: 0 0 calc(33.333% - 1rem);
+    /* margin-right: rem; */
+    max-width: 20rem;
+    height: 16rem;
+  }
+}
+.gallery {
+  background: hsl(210, 31%, 80%);
+  min-height: 70vh;
+}
+.links {
+  text-align: center;
+}
+.gallery-image {
+  border: -2px solid transparent;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  overflow: hidden;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  object-fit: cover;
+}
+.gallery-photo {
+  max-width: 100%;
+  display: block;
+}
+.gallery-info {
+  text-align: center;
+}
+.gallery-card {
+  background: hsl(212, 33%, 89%);
+  height: 22rem;
+  max-width: 55vw;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+  transition: all 0.3s linear;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.gallery-image,
+.gallery-title,
+.gallery-text {
+  margin-bottom: 1.2rem;
+}
+.gallery-card:hover {
+  transform: scale(1.04);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+@media screen and (min-width: 768px) {
+  .card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .gallery-card {
+    flex: 0 0 calc(50% - 2rem);
+  }
+}
+@media screen and (min-width: 1170px) {
+  .card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .gallery-card {
+    flex: 0 0 calc(33.333% - 1rem);
+  }
+}
+.staff {
+  background: hsl(185, 57%, 50%);
+}
+.staff-content > .section-title {
+  color: #102a42;
+}
+.staff-icon {
+  display: flex;
+  /* justify-content: space-between; */
+  flex-wrap: wrap;
+  padding-left: 0.3rem;
+}
+.staff-icon > p {
+  margin-left: 0.75rem;
+}
+.staff-admin {
+  background: #e8e8e4;
+  border: 0px solid transparent;
+  box-sizing: border-box;
+  max-width: 25rem;
+  height: 27rem;
+  margin-left: auto;
+  margin-right: auto;
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+  align-items: center;
+  margin-bottom: 2.5rem;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+.staff-image-container {
+  border: 0px solid transparent;
+  box-sizing: border-box;
+  width: 100%;
+  height: 60%;
+  /* overflow: hidden; */
+  margin-bottom: 1.2rem;
+}
+.staff-info {
+  border: 2px solid transparent;
+  height: 35%;
+  max-width: 100%;
+  box-sizing: border-box;
+
+  /* display: block; */
+}
+.staff-information {
+  color: hsl(185, 57%, 50%);
+  text-align: center;
+}
+.staff-main-info {
+  padding: 0 1.2rem;
+}
+.staff-link {
+  text-align: center;
+  max-width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1.2rem;
+}
+.staff-image {
+  width: 100%;
+  display: block;
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+  object-fit: cover;
+}
+
+.staff-title {
+  text-align: center;
+  max-width: 28rem;
+  margin-left: auto;
+  margin-right: auto;
+  color: hsl(185, 57%, 50%);
+}
+
+.staff-info > p {
+  color: #beed8c;
+}
+.staff-job-title {
+  color: #beed8c;
+}
+@media screen and (min-width: 992px) {
+  .staff-flex {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .staff-admin {
+    flex: 0 0 calc(50% - 2.5rem);
+  }
+}
+.footer {
+  /* background: #f8edeb; */
+  background: linear-gradient(rgba(14, 13, 13, 0.9), rgba(22, 21, 21, 0.9)),
+    url("./images/tour-3.jpeg") center/cover no-repeat;
+}
+.footer-article {
+  margin-bottom: 3.5rem;
+  text-align: center;
+  letter-spacing: 0.2rem;
+  line-height: 1.2rem;
+  max-width: 25rem;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.7rem;
+}
+.footer-form {
+  display: block;
+  width: 80%;
+  padding: 1rem 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: 0.75rem;
+  text-transform: capitalize;
+  border: none;
+  margin-left: auto;
+  margin-right: auto;
+  background: hsl(210, 36%, 96%);
+}
+.footer-section-title,
+.footer-text {
+  color: #f8edeb;
+}
+.submit-btn {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background: #beed8c;
+  border: 2px solid #beed8c;
+  transition: all 0.2s linear;
+  color: black;
+}
+.submit-btn:hover {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  /* padding: -2px; */
+  box-sizing: border-box;
+}
+.footer-navlink {
+  padding: 3rem 2rem;
+  text-align: center;
+  border-top: 2px solid hsl(192, 54%, 66%);
+  border-bottom: 2px solid hsl(192, 54%, 66%);
+  max-width: 90vw;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.footer-link {
+  text-transform: capitalize;
+  margin-right: 1.2rem;
+  display: inline-block;
+  margin-bottom: 1.7rem;
+}
+.footer-icon {
+  background-color: hsl(212, 33%, 89%);
+  padding: 0.6rem;
+  display: inline-block;
+  font-size: 1rem;
+  transition: all 0.2s linear;
+  border-radius: 0.2rem;
+  cursor: pointer;
+}
+.link-icon {
+  color: black;
+}
+.footer-icon:hover {
+  color: white;
+}
+.facebook:hover {
+  background-color: rgb(87, 87, 238);
+}
+.google:hover {
+  background: rgb(238, 93, 93);
+}
+.twitter:hover {
+  background: rgb(79, 198, 245);
+}
+.discord:hover {
+  background: rgb(102, 102, 247);
+}
+.linkedin:hover {
+  background: rgb(47, 47, 248);
+}
+@media screen and (min-width: 992px) {
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* max-width: 25rem; */
+  }
+  .footer-article {
+    flex: 0 0 calc(33.333% - 2rem);
+  }
+}
