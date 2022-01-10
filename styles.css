@@ -40,15 +40,6 @@ p {
   color: grey;
   font-family: "Times New Roman", Times, serif;
 }
-.about {
-  min-height: 60vh;
-  background: linear-gradient(rgba(14, 13, 13, 0.9), rgba(22, 21, 21, 0.9)),
-    url("./images/main.jpeg") center/cover no-repeat;
-  color: white;
-}
-.about p {
-  color: white;
-}
 .section {
   padding: 5rem 0;
 }
@@ -75,10 +66,51 @@ It only affects texts and  */
 } */
 
 /* 
+===================
+JavaScript Section
+===================
+*/
+/* .overlay {
+  background-color: rgba(0, 0, 0, 0.2);
+  background-position: fixed;
+  z-index: 5;
+  height: 100vh;
+  width: 100vw;
+  backdrop-filter: blur(3px);
+} */
+
+/* 
+==============
+Hero
+==============
+*/
+.hero {
+  background: linear-gradient(rgba(241, 80, 37, 0.4), rgba(0, 0, 0, 0.4)),
+    url("./images/size-image-2.jpeg") center/cover fixed no-repeat;
+}
+.hero-banner {
+  height: 100vh;
+  width: 100vw;
+}
+.hero-text {
+  letter-spacing: var(--spacing);
+  line-height: 3rem;
+  text-align: center;
+  color: #fff;
+  padding-top: 15rem;
+  font-size: 3rem;
+  /* padding-right: 2rem; */
+  font-family: sans-serif;
+  max-width: 25rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* 
 =========
 Product
 =========
 */
+
 .product {
   background: #fff;
 }
@@ -177,8 +209,8 @@ Gallery
 .gallery-card {
   overflow: hidden;
   background: hsl(209, 55%, 81%);
-  max-height: 58vh;
-  max-width: 55vw;
+  max-height: 60%;
+  max-width: 60%;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
   margin-left: auto;
@@ -222,6 +254,15 @@ Gallery
 About
 =============
 */
+.about {
+  min-height: 60vh;
+  background: linear-gradient(rgba(14, 13, 13, 0.9), rgba(22, 21, 21, 0.9)),
+    url("./images/main.jpeg") center/cover no-repeat;
+  color: white;
+}
+.about p {
+  color: white;
+}
 .about-info {
   margin-bottom: 5rem;
 }
