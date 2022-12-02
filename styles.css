@@ -20,6 +20,7 @@ body {
   background: hsl(210, 36%, 96%);
   font-family: "Times New Roman", Times, serif;
   font-size: 1rem;
+  overflow-x: hidden;
 }
 
 h1,
@@ -86,22 +87,23 @@ Hero
 */
 .hero {
   background: linear-gradient(rgba(241, 80, 37, 0.4), rgba(0, 0, 0, 0.4)),
-    url("./images/size-image-2.jpeg") center/cover fixed no-repeat;
-}
-.hero-banner {
+    url("./images/size-image-2.jpeg") center/cover no-repeat;
   height: 100vh;
   width: 100vw;
+  display: grid;
+  justify-content: center;
+  align-items: center;
 }
+/* .hero-banner {
+  background: blue;
+} */
 .hero-text {
   letter-spacing: var(--spacing);
   line-height: 3rem;
   text-align: center;
   color: #fff;
-  padding-top: 15rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
   font-size: 3rem;
-  /* padding-right: 2rem; */
+  padding: 0 1rem;
   font-family: sans-serif;
   max-width: 25rem;
   margin-left: auto;
@@ -209,7 +211,6 @@ Gallery
   max-height: 40%;
 }
 .gallery-card {
-  overflow: hidden;
   background: hsl(209, 55%, 81%);
   max-height: 60%;
   max-width: 60%;
@@ -371,7 +372,7 @@ Staff
   border: 0px solid transparent;
   box-sizing: border-box;
   max-width: 60%;
-  height: 65%;
+  max-height: 65%;
   margin-left: auto;
   margin-right: auto;
   border-top-left-radius: 1.5rem;
@@ -385,7 +386,7 @@ Staff
   border: 0px solid transparent;
   box-sizing: border-box;
   width: 100%;
-  max-height: 70%;
+  height: 70%;
   /* overflow: hidden; */
   margin-bottom: 1.2rem;
 }
