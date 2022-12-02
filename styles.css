@@ -262,6 +262,7 @@ About
   background: linear-gradient(rgba(14, 13, 13, 0.9), rgba(22, 21, 21, 0.9)),
     url("./images/main.jpeg") center/cover no-repeat;
   color: white;
+  padding: 0 1.5rem;
 }
 .about p {
   color: white;
